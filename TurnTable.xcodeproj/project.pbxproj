@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C63EEB5C234EA13E00BFBC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB5B234EA13E00BFBC0A /* AppDelegate.swift */; };
-		C63EEB5E234EA13E00BFBC0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB5D234EA13E00BFBC0A /* SceneDelegate.swift */; };
 		C63EEB60234EA13E00BFBC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB5F234EA13E00BFBC0A /* ViewController.swift */; };
 		C63EEB63234EA13E00BFBC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C63EEB61234EA13E00BFBC0A /* Main.storyboard */; };
 		C63EEB65234EA14100BFBC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C63EEB64234EA14100BFBC0A /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		C63EEB58234EA13E00BFBC0A /* TurnTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurnTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C63EEB5B234EA13E00BFBC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C63EEB5D234EA13E00BFBC0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C63EEB5F234EA13E00BFBC0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C63EEB62234EA13E00BFBC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C63EEB64234EA14100BFBC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				C63EEB5B234EA13E00BFBC0A /* AppDelegate.swift */,
-				C63EEB5D234EA13E00BFBC0A /* SceneDelegate.swift */,
 				C63EEB5F234EA13E00BFBC0A /* ViewController.swift */,
 				C63EEB61234EA13E00BFBC0A /* Main.storyboard */,
 				C63EEB64234EA14100BFBC0A /* Assets.xcassets */,
@@ -140,7 +137,6 @@
 			files = (
 				C63EEB60234EA13E00BFBC0A /* ViewController.swift in Sources */,
 				C63EEB5C234EA13E00BFBC0A /* AppDelegate.swift in Sources */,
-				C63EEB5E234EA13E00BFBC0A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +283,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KB772ULPQ;
 				INFOPLIST_FILE = TurnTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KB772ULPQ;
 				INFOPLIST_FILE = TurnTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
