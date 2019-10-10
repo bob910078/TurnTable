@@ -33,7 +33,9 @@ class TurnTableMovementTracker {
             let newPolar = self.polarSystem.convert(from: newCartesia)
             // print("old \(oldPolar), new \(newPolar)")
             
+            // φ in the interval (−π, π]
             let deltaAngle = newPolar.angle - oldPolar.angle
+            
             let clockwise: TurnMovement.TurnDirenction = (deltaAngle < 0) ? .cw : .ccw
             let output: Float = {
                 let ret = Float(deltaAngle * 100)
@@ -53,6 +55,9 @@ struct TurnMovement {
     let direction: TurnDirenction
     let value: Float
     
+    /// https://en.wikipedia.org/wiki/Clockwise
+    /// - clockwise 順時針方向
+    /// - counterclockwise 逆時針方向
     enum TurnDirenction {
         case cw, ccw
     }
