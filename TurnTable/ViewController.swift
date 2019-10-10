@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     let turnView = UIView()
+    @IBOutlet weak var myLabel: UILabel!
+    
+    var sum: Float = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,8 @@ class ViewController: UIViewController {
         
         let panG = UIPanGestureRecognizer(target: self, action: #selector(pan(gesture:)))
         turnView.addGestureRecognizer(panG)
+        
+        myLabel.text = self.sum.desc
     }
     
     
@@ -35,6 +40,10 @@ class ViewController: UIViewController {
         let rectSize = self.turnView.bounds.size
         let fulcrum = CGPoint(x: rectSize.width / 2, y: rectSize.height / 2)
         let helper = TurnTableMovementTracker(fulcrumPoint: fulcrum)
+        helper.updateValue = { [weak self] movement in
+            self?.sum += movement.value.rounded(FloatingPointRoundingRule.toNearestOrAwayFromZero)
+            self?.myLabel.text = self?.sum.desc
+        }
         return helper
     }()
     
@@ -45,4 +54,11 @@ class ViewController: UIViewController {
         movement.touchPoint.value = location
     }
     
+}
+
+
+extension Float {
+    var desc: String {
+        return String(self)
+    }
 }

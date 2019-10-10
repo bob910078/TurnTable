@@ -14,6 +14,7 @@ class TurnTableMovementTracker {
     let polarSystem: PolarCoordination
     
     var touchPoint: Observable<CGPoint>
+    var updateValue: ((TurnMovement) -> Void)?
     
     init(fulcrumPoint: CGPoint) {
         self.fulcrumPoint = fulcrumPoint
@@ -33,10 +34,26 @@ class TurnTableMovementTracker {
             // print("old \(oldPolar), new \(newPolar)")
             
             let deltaAngle = newPolar.angle - oldPolar.angle
-            let clockwise = (deltaAngle < 0) ? "clockwise" : "counter-clockwise"
-            print(clockwise)
+            let clockwise: TurnMovement.TurnDirenction = (deltaAngle < 0) ? .cw : .ccw
+            let output: Float = {
+                let ret = Float(deltaAngle * 100)
+                let validRange = -50.0...50.0
+                let isValid = validRange.contains(Double(ret))
+                return isValid ? ret : 0.0
+            }()
+            let movement = TurnMovement(direction: clockwise, value: output)
+            self.updateValue?(movement)
         }
     }
     
 }
 
+struct TurnMovement {
+    
+    let direction: TurnDirenction
+    let value: Float
+    
+    enum TurnDirenction {
+        case cw, ccw
+    }
+}
