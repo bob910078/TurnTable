@@ -36,7 +36,7 @@ class PolarCoordination {
     
     /// 轉換 view coodinator 成為 draw coordinator
     // https://developer.apple.com/library/archive/documentation/2DDrawing/Conceptual/DrawingPrintingiOS/GraphicsDrawingOverview/GraphicsDrawingOverview.html
-    func convertCoordinator(viewCoordinator vPoint: CGPoint) -> CGPoint {
+    private func convertCoordinator(viewCoordinator vPoint: CGPoint) -> CGPoint {
         return CGPoint(x: vPoint.x, y: -vPoint.y)
     }
 

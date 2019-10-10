@@ -31,13 +31,12 @@ class ViewController: UIViewController {
     }
     
     
-    
-    var fulcrumPoint: CGPoint {
+    lazy var movement: TurnTableMovementTracker = {
         let rectSize = self.turnView.bounds.size
-        return CGPoint(x: rectSize.width / 2, y: rectSize.height / 2)
-    }
-    
-    lazy var movement = MovementHelper(fulcrumPoint: fulcrumPoint)
+        let fulcrum = CGPoint(x: rectSize.width / 2, y: rectSize.height / 2)
+        let helper = TurnTableMovementTracker(fulcrumPoint: fulcrum)
+        return helper
+    }()
     
     @objc func pan(gesture: UIGestureRecognizer) {
         

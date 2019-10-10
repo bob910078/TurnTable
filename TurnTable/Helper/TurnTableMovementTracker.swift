@@ -1,5 +1,5 @@
 //
-//  MovementHelper.swift
+//  TurnTableMovementTracker.swift
 //  TurnTable
 //
 //  Created by Bob Chang on 2019/10/10.
@@ -8,26 +8,28 @@
 
 import UIKit
 
-class MovementHelper {
+class TurnTableMovementTracker {
     
     let fulcrumPoint: CGPoint
-    var touchPoint: Observable<CGPoint>
+    let polarSystem: PolarCoordination
     
-    lazy var polarSystem = PolarCoordination(origin: fulcrumPoint)
+    var touchPoint: Observable<CGPoint>
     
     init(fulcrumPoint: CGPoint) {
         self.fulcrumPoint = fulcrumPoint
+        self.polarSystem = PolarCoordination(origin: fulcrumPoint)
+        
         self.touchPoint = Observable.init(CGPoint.zero)
-        self.touchPoint.listener = { [weak self] (old, new) in
+        self.touchPoint.listener = { [weak self] (oldCartesia, newCartesia) in
             
-            let deltaX = new.x-old.x
-            let deltaY = new.y-old.y
+            let deltaX = newCartesia.x-oldCartesia.x
+            let deltaY = newCartesia.y-oldCartesia.y
             // print("old \(old), new \(new) --- delX \(deltaX), delY \(deltaY)")
             
             guard deltaX != 0 || deltaY != 0 else { return }
             guard let self = self else { return }
-            let oldPolar = self.polarSystem.convert(from: old)
-            let newPolar = self.polarSystem.convert(from: new)
+            let oldPolar = self.polarSystem.convert(from: oldCartesia)
+            let newPolar = self.polarSystem.convert(from: newCartesia)
             // print("old \(oldPolar), new \(newPolar)")
             
             let deltaAngle = newPolar.angle - oldPolar.angle
