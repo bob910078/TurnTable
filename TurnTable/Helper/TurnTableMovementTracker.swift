@@ -10,8 +10,8 @@ import UIKit
 
 class TurnTableMovementTracker {
     
-    let fulcrumPoint: CGPoint
-    let polarSystem: PolarCoordination
+    private let fulcrumPoint: CGPoint
+    private let polarSystem: PolarCoordination
     
     var touchPoint: Observable<CGPoint>
     var updateValue: ((TurnMovement) -> Void)?

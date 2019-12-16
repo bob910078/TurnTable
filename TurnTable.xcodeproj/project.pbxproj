@@ -15,6 +15,7 @@
 		C63EEB70234EE45000BFBC0A /* PolarCoordination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB6F234EE45000BFBC0A /* PolarCoordination.swift */; };
 		C63EEB72234EE69B00BFBC0A /* TurnTableMovementTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB71234EE69B00BFBC0A /* TurnTableMovementTracker.swift */; };
 		C63EEB74234EEBC300BFBC0A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB73234EEBC300BFBC0A /* Observable.swift */; };
+		C6E9AFCF23A7DB0B000E24C7 /* TurnTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E9AFCE23A7DB0B000E24C7 /* TurnTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C63EEB6F234EE45000BFBC0A /* PolarCoordination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarCoordination.swift; sourceTree = "<group>"; };
 		C63EEB71234EE69B00BFBC0A /* TurnTableMovementTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnTableMovementTracker.swift; sourceTree = "<group>"; };
 		C63EEB73234EEBC300BFBC0A /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		C6E9AFCE23A7DB0B000E24C7 /* TurnTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +66,11 @@
 				C63EEB5B234EA13E00BFBC0A /* AppDelegate.swift */,
 				C63EEB5F234EA13E00BFBC0A /* ViewController.swift */,
 				C63EEB64234EA14100BFBC0A /* Assets.xcassets */,
+				C63EEB76234EF22900BFBC0A /* Helper */,
 				C63EEB66234EA14100BFBC0A /* LaunchScreen.storyboard */,
 				C63EEB61234EA13E00BFBC0A /* Main.storyboard */,
-				C63EEB76234EF22900BFBC0A /* Helper */,
 				C63EEB75234EF21A00BFBC0A /* Tool */,
+				C6E9AFCD23A7DAFF000E24C7 /* View */,
 			);
 			path = TurnTable;
 			sourceTree = "<group>";
@@ -87,6 +90,14 @@
 				C63EEB71234EE69B00BFBC0A /* TurnTableMovementTracker.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		C6E9AFCD23A7DAFF000E24C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6E9AFCE23A7DB0B000E24C7 /* TurnTableView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E9AFCF23A7DB0B000E24C7 /* TurnTableView.swift in Sources */,
 				C63EEB60234EA13E00BFBC0A /* ViewController.swift in Sources */,
 				C63EEB74234EEBC300BFBC0A /* Observable.swift in Sources */,
 				C63EEB70234EE45000BFBC0A /* PolarCoordination.swift in Sources */,
