@@ -13,9 +13,9 @@
 		C63EEB65234EA14100BFBC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C63EEB64234EA14100BFBC0A /* Assets.xcassets */; };
 		C63EEB68234EA14100BFBC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C63EEB66234EA14100BFBC0A /* LaunchScreen.storyboard */; };
 		C63EEB70234EE45000BFBC0A /* PolarCoordination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB6F234EE45000BFBC0A /* PolarCoordination.swift */; };
-		C63EEB72234EE69B00BFBC0A /* TurnTableMovementTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB71234EE69B00BFBC0A /* TurnTableMovementTracker.swift */; };
 		C63EEB74234EEBC300BFBC0A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63EEB73234EEBC300BFBC0A /* Observable.swift */; };
 		C6E9AFCF23A7DB0B000E24C7 /* TurnTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E9AFCE23A7DB0B000E24C7 /* TurnTableView.swift */; };
+		C6E9AFD223A8505E000E24C7 /* TurnMovement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E9AFD123A8505E000E24C7 /* TurnMovement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		C63EEB67234EA14100BFBC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C63EEB69234EA14100BFBC0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C63EEB6F234EE45000BFBC0A /* PolarCoordination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarCoordination.swift; sourceTree = "<group>"; };
-		C63EEB71234EE69B00BFBC0A /* TurnTableMovementTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnTableMovementTracker.swift; sourceTree = "<group>"; };
 		C63EEB73234EEBC300BFBC0A /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C6E9AFCE23A7DB0B000E24C7 /* TurnTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnTableView.swift; sourceTree = "<group>"; };
+		C6E9AFD123A8505E000E24C7 /* TurnMovement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnMovement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,9 @@
 				C63EEB5B234EA13E00BFBC0A /* AppDelegate.swift */,
 				C63EEB5F234EA13E00BFBC0A /* ViewController.swift */,
 				C63EEB64234EA14100BFBC0A /* Assets.xcassets */,
-				C63EEB76234EF22900BFBC0A /* Helper */,
 				C63EEB66234EA14100BFBC0A /* LaunchScreen.storyboard */,
 				C63EEB61234EA13E00BFBC0A /* Main.storyboard */,
+				C6E9AFD023A85056000E24C7 /* Model */,
 				C63EEB75234EF21A00BFBC0A /* Tool */,
 				C6E9AFCD23A7DAFF000E24C7 /* View */,
 			);
@@ -84,20 +84,20 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		C63EEB76234EF22900BFBC0A /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				C63EEB71234EE69B00BFBC0A /* TurnTableMovementTracker.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		C6E9AFCD23A7DAFF000E24C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				C6E9AFCE23A7DB0B000E24C7 /* TurnTableView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C6E9AFD023A85056000E24C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6E9AFD123A8505E000E24C7 /* TurnMovement.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,11 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E9AFD223A8505E000E24C7 /* TurnMovement.swift in Sources */,
 				C6E9AFCF23A7DB0B000E24C7 /* TurnTableView.swift in Sources */,
 				C63EEB60234EA13E00BFBC0A /* ViewController.swift in Sources */,
 				C63EEB74234EEBC300BFBC0A /* Observable.swift in Sources */,
 				C63EEB70234EE45000BFBC0A /* PolarCoordination.swift in Sources */,
-				C63EEB72234EE69B00BFBC0A /* TurnTableMovementTracker.swift in Sources */,
 				C63EEB5C234EA13E00BFBC0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
